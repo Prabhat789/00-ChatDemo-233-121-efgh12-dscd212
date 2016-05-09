@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cardList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llSend"
+            android:layout_alignParentTop="true"
+            android:scrollbars="vertical" />/>
+        <RelativeLayout
+            android:id="@+id/llSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/darker_gray"
+            android:padding="10dp">
+            <EditText
+                android:id="@+id/etMessage"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignBottom="@+id/btSend"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/btSend"
+                android:background="@drawable/btn_rounded_corner_white"
+                android:gravity="left|center_vertical"
+                android:hint="Message"
+                android:inputType="textShortMessage"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/smoke_white"
+                />
+
+            <Button
+                android:id="@+id/btSend"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="Send"
+                android:elevation="4dp"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                android:textStyle="normal"></Button>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

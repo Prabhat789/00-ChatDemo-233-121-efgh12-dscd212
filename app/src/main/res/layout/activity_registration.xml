@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <EditText
+            android:layout_width="240dp"
+            android:layout_height="45dp"
+            android:ems="8"
+            android:singleLine="true"
+            android:hint="Name"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/editName"
+            />
+        <EditText
+            android:layout_width="240dp"
+            android:layout_height="45dp"
+            android:ems="8"
+            android:hint="Email"
+            android:singleLine="true"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="10dp"
+            android:id="@+id/editEmail"
+            />
+        <EditText
+            android:layout_width="240dp"
+            android:layout_height="45dp"
+            android:ems="8"
+            android:hint="Password"
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/editPassword"
+            />
+        <EditText
+            android:layout_width="240dp"
+            android:layout_height="45dp"
+            android:ems="8"
+            android:hint="Confirm Password"
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/editConfPassword"
+            />
+
+        <Button
+            android:layout_width="240dp"
+            android:layout_height="45dp"
+            android:text="SignUp"
+            android:id="@+id/btnSignUp"
+            android:layout_marginTop="30dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>
