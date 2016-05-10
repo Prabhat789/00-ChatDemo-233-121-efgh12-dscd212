@@ -74,6 +74,7 @@ public class OneToOneChatListAdapter extends RecyclerView.Adapter<OneToOneChatLi
             //holder.txtBody.setGravity(Gravity.CENTER_VERTICAL | Gravity.RIGHT);
             holder.txtBody.setTextColor(mContext.getResources().getColor(R.color.smoke_white));
             holder.llBody.setGravity(Gravity.CENTER_VERTICAL |Gravity.RIGHT);
+            holder.txtName.setGravity(Gravity.CENTER_VERTICAL | Gravity.RIGHT);
 
         } else {
             holder.imageLeft.setVisibility(View.VISIBLE);
@@ -82,16 +83,15 @@ public class OneToOneChatListAdapter extends RecyclerView.Adapter<OneToOneChatLi
             holder.txtBody.setGravity(Gravity.CENTER_VERTICAL | Gravity.LEFT);
             holder.txtBody.setTextColor(mContext.getResources().getColor(R.color.cardview_dark_background));
             holder.llBody.setGravity(Gravity.CENTER_VERTICAL | Gravity.LEFT);
+            holder.txtName.setGravity(Gravity.CENTER_VERTICAL | Gravity.LEFT);
 
 
         }
         final CircularImage profileView = isMe ? holder.imageRight : holder.imageLeft;
         try {
             if (mDataset.get(position).getProfileImage().length() != 0) {
-
                 loadImage(mDataset.get(position).getProfileImage(), profileView, mContext);
             }else {
-
                 loadImage(getProfileUrl(mDataset.get(position).getUserId()), profileView,mContext);
             }
         } catch (Exception e) {
@@ -100,6 +100,7 @@ public class OneToOneChatListAdapter extends RecyclerView.Adapter<OneToOneChatLi
         }
 
         holder.txtBody.setText(mDataset.get(position).getBody());
+        holder.txtName.setText(mDataset.get(position).getUserName());
         //holder.txtUserName.setText(mDataset.get(position).getUserName() + " at " + mDataset.get(position).getDateTime());
         profileView.setOnClickListener(new View.OnClickListener() {
 
@@ -131,7 +132,7 @@ public class OneToOneChatListAdapter extends RecyclerView.Adapter<OneToOneChatLi
 
     public class DataObjectHolder extends RecyclerView.ViewHolder {
 
-        TextView txtBody;
+        TextView txtBody,txtName;
         CircularImage imageLeft, imageRight;
         LinearLayout llBody;
 
@@ -141,7 +142,7 @@ public class OneToOneChatListAdapter extends RecyclerView.Adapter<OneToOneChatLi
             imageRight = (CircularImage) itemView.findViewById(R.id.ivProfileRight);
             txtBody = (TextView) itemView.findViewById(R.id.txtBody);
             llBody = (LinearLayout) itemView.findViewById(R.id.llText);
-
+            txtName = (TextView)itemView.findViewById(R.id.txtName);
             //txtUserName = (TextView) itemView.findViewById(R.id.userName);
             //llBody = (LinearLayout)itemView.findViewById(R.id.llBody);
         }

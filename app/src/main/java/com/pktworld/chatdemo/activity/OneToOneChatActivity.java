@@ -83,7 +83,6 @@ public class OneToOneChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_one_to_one_chat);
         friendObjectId = getIntent().getStringExtra(ApplicationConstant.FLAG1);
         userNmae = getIntent().getStringExtra(ApplicationConstant.FLAG2);
-
         refreshMessages();
         ParseInstallation installation = ParseInstallation.getCurrentInstallation();
         installation.put("user", ParseUser.getCurrentUser());
@@ -127,8 +126,6 @@ public class OneToOneChatActivity extends AppCompatActivity {
         isAppAlive = 0;
         super.onStop();
     }
-
-
 
     @Override
     public void onBackPressed() {
@@ -244,6 +241,7 @@ public class OneToOneChatActivity extends AppCompatActivity {
                 Message message = new Message();
                 message.setUserId(sUserId);
                 message.setUserName(sUserName);
+                message.setGroupId(sUserId);
                 message.setDateTime(getDateTime());
                 message.setProfileImage((String) ParseUser.getCurrentUser().get("profileImage"));
                 message.setBody(body);

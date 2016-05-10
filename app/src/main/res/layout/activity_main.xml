@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.UserListActivity">
+    tools:context=".activity.GroupListActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="25sp"
         android:textColor="@android:color/white"
-        android:text="Users"
+        android:text="Groups"
         android:gravity="center"
         android:background="@android:color/darker_gray"/>
 
@@ -19,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:visibility="gone"
         android:id="@+id/layoutRecyclerList">
         <!--<android.support.v7.widget.RecyclerView
             android:id="@+id/cardList"
@@ -32,6 +33,34 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center"
+        android:id="@+id/layoutNoGroup">
+
+        <EditText
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:maxLength="50"
+            android:hint="Enter Group Name"
+            android:id="@+id/editGroupName"/>
+
+
+
+        <Button
+            android:layout_width="240dp"
+            android:layout_height="45dp"
+            android:id="@+id/btnCreateGroup"
+            android:layout_marginTop="20dp"
+            android:text = "Create Group"/>
 
 
     </LinearLayout>

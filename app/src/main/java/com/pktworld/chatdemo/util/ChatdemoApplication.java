@@ -11,6 +11,7 @@ import com.parse.ParseObject;
 import com.parse.ParsePush;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+import com.pktworld.chatdemo.model.Group;
 import com.pktworld.chatdemo.model.Message;
 
 /**
@@ -39,6 +40,7 @@ public class ChatdemoApplication extends Application{
         this.setAppContext(getApplicationContext());
         ParseObject.registerSubclass(Message.class);
         ParseObject.registerSubclass(ParseUser.class);
+        ParseObject.registerSubclass(Group.class);
         Parse.enableLocalDatastore(getAppContext());
         Parse.initialize(getAppContext());
         ParseUser.enableAutomaticUser();

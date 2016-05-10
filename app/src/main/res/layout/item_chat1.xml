@@ -28,7 +28,16 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
+            android:orientation="vertical"
             android:layout_weight="0.60">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:text="Prabhat"
+                android:layout_marginBottom="3dp"
+                android:id="@+id/txtName"/>
             <TextView
                 android:id="@+id/txtBody"
                 android:layout_width="wrap_content"
@@ -43,7 +52,7 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingTop="3dp"
-                android:text="Prabhta kjhfjdsnfkljkldhfjdshfwehjflksl;kfl sdjhfjkhgkljfdgl;dkg;ljdgklhsdkv skjhgjfkjglkdfklsnfjkgdfjhrkg mghjkfhgokfjglfmlnjshdfsd"
+                android:text=""
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="16sp" />
 

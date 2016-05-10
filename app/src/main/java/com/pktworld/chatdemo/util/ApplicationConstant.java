@@ -10,6 +10,9 @@ public class ApplicationConstant {
     public static final String PASSWORD = "password";
     public static final String FLAG1 = "flag1";
     public static final String FLAG2 = "flag2";
+    public static final String FLAG3 = "flag3";
     public static final String USER_LIST_ADAPTER = "userListAdapter";
+    public static final String GROUP_LIST_ADAPTER = "groupListAdapter";
+
 
 }

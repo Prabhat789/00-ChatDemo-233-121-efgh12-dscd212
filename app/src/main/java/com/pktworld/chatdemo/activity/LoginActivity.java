@@ -147,7 +147,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 List<String> list = new ArrayList<String>();
                 mProgressDialog.dismiss();
                 if (user != null) {
-                    Intent intent = new Intent(LoginActivity.this, UserListActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, GroupListActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 } else {
